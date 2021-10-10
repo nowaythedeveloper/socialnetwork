@@ -1,0 +1,12 @@
+.friendItem {
+    display: flex;
+}
+
+.friendItem span {
+    align-self: center;
+}
+
+.friendItem img {
+    width: 50px;
+    height: 50px;
+}

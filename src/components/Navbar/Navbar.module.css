@@ -12,3 +12,7 @@
 .item a.active {
     color: gold;
 }
+
+.friendsList {
+    margin-top: 20px;
+}

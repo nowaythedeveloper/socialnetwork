@@ -11,16 +11,17 @@ import News from './components/News/News';
 
 
 const App = (props) => {
+
   return (
     <BrowserRouter>
       <div className='wrapper'>
         <Header/>
-        <Navbar/>
+        <Navbar state={props.appState.sideBar}/>
         <div className="wrapper-content">
-          <Route path="/profile" component={Profile} />
-          <Route path="/dialogs" component={Dialogs} />
-          <Route path="/settings" component={Settings} />
-          <Route path="/music" component={Music} />
+          <Route path="/profile" render={() => <Profile state={props.appState.profilePage} />} /> {/* Можно так рендерить */}
+          <Route path="/dialogs" render={() => <Dialogs state={props.appState.dialogsPage} />} />
+          <Route path="/settings" component={() => <Settings />} /> {/* Можно так рендерить */}
+          <Route path="/music" component={Music} /> {/* Можно так рендерить */}
           <Route path="/news" component={News} />
         </div>
       </div>
